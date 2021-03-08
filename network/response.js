@@ -8,7 +8,7 @@ exports.success =function(req,res,status,message){
     })
 }
 
-exports.error =function(req,res,status){
+exports.error =function(req,res,status,message){
     let statusCode=status || 500;
     let statusMessage = message || 'Internal server error';
     res.status(statusCode).send({
